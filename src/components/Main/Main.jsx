@@ -31,23 +31,35 @@ const Main = () => {
                 <p>How can I help you today?</p>
               </div>
               <div className="cards">
-                <div className="card">
-                  <p>Suggest beautiful places to see on upcoming road trip</p>
-                  <img src={assets.compass_icon} alt="CompassIcon" />
-                </div>
-                <div className="card">
-                  <p>Suggest beautiful places to see on upcoming road trip</p>
-                  <img src={assets.bulb_icon} alt="CompassIcon" />
-                </div>
-                <div className="card">
-                  <p>Suggest beautiful places to see on upcoming road trip</p>
-                  <img src={assets.message_icon} alt="CompassIcon" />
-                </div>
-                <div className="card">
-                  <p>Suggest beautiful places to see on upcoming road trip</p>
-                  <img src={assets.code_icon} alt="CompassIcon" />
-                </div>
-              </div>
+  <div
+    className="card"
+    onClick={() => setInput("Suggest beautiful places to see on upcoming road trip")}
+  >
+    <p>Suggest beautiful places to see on upcoming road trip</p>
+    <img src={assets.compass_icon} alt="CompassIcon" />
+  </div>
+  <div
+    className="card"
+    onClick={() => setInput("Suggest beautiful places to see on upcoming road trip")}
+  >
+    <p>Suggest beautiful places to see on upcoming road trip</p>
+    <img src={assets.bulb_icon} alt="CompassIcon" />
+  </div>
+  <div
+    className="card"
+    onClick={() => setInput("Suggest beautiful places to see on upcoming road trip")}
+  >
+    <p>Suggest beautiful places to see on upcoming road trip</p>
+    <img src={assets.message_icon} alt="CompassIcon" />
+  </div>
+  <div
+    className="card"
+    onClick={() => setInput("Suggest beautiful places to see on upcoming road trip")}
+  >
+    <p>Suggest beautiful places to see on upcoming road trip</p>
+    <img src={assets.code_icon} alt="CompassIcon" />
+  </div>
+</div>
             </>
           ) : (
             <div className="result">
@@ -73,14 +85,14 @@ const Main = () => {
           <div className="main-bottom">
             <div className="search-box">
               <input
+              className="search-input"
+                spellCheck="false"
                 onChange={(event) => setInput(event.target.value)}
                 value={input}
                 type="text"
                 placeholder="Enter a prompt here"
               />
-              <div className="search-box-icon">
-                <img src={assets.gallery_icon} alt="GalleryIcon" />
-                <img src={assets.mic_icon} alt="MicIcon" />
+              <div className="search-box-icon">  
                 {input ? (
                   <img
                     onClick={() => onSent()}
@@ -91,10 +103,10 @@ const Main = () => {
               </div>
             </div>
             <p className="bottom-info">
-              Gemini may display inaccurate info, including about people, so
+              Veer may display inaccurate info, including about people, so
               double-check its responses.{" "}
               <a href="https://support.google.com/gemini/answer/13594961?visit_id=638488069169109558-2959892032&p=privacy_notice&rd=1#privacy_notice">
-                Your privacy & Gemini Apps
+                Your privacy & Veer Apps
               </a>
             </p>
           </div>

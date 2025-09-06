@@ -58,8 +58,10 @@
 .sidebar .bottom-item{
     padding-right: 10px;
 }
-@media (max-width: 600px) {
-    .sidebar{
-        display: none;
-    }
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
+
+    
