@@ -5,12 +5,18 @@ import { Context } from "../../context/Context";
 
 const Sidebar = () => {
   const [sidebarExtended, setSidebarExtended] = useState(false);
+   const [darkMode, setDarkMode] = useState(false);
   const { onSent, prevPrompts, setRecentPrompt, newChat } = useContext(Context);
 
   const loadPrompt = async (prompt) => {
     setRecentPrompt(prompt);
     await onSent(prompt);
   };
+   const toggleDarkMode = () => {
+    setDarkMode((prev) => !prev);
+    document.body.classList.toggle("dark-mode");
+  };
+
   return (
     <>
       <div className="sidebar">
@@ -50,6 +56,22 @@ const Sidebar = () => {
             </div>
           ) : null}
         </div>
+        <button
+  className="dark-mode-toggle"
+  onClick={toggleDarkMode}
+  style={{
+    margin: "20px 0",
+    padding: "8px 16px",
+    borderRadius: "20px",
+    border: "none",
+    background: darkMode ? "#222" : "#eee",
+    color: darkMode ? "#fff" : "#222",
+    cursor: "pointer",
+    width: "100%",
+  }}
+>
+  {darkMode ? "Light Mode" : "Dark Mode"}
+</button>
         <div className="bottom">
           <div className="bottom-item recent-entry">
             <img src={assets.question_icon} alt="QuestionIcon" />

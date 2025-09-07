@@ -18,3 +18,33 @@
       opacity: 1;
     }
 }
+
+
+body.dark-mode {
+  background: #181818 !important;
+  color: #f0f0f0 !important;
+}
+body.dark-mode .main,
+body.dark-mode .sidebar {
+  background: #23272f !important;
+  color: #f0f0f0 !important;
+}
+body.dark-mode .card {
+  background: #23272f !important;
+  color: #f0f0f0 !important;
+}
+body.dark-mode .card:hover {
+  background: #2d313a !important;
+}
+body.dark-mode .search-box {
+  background: #23272f !important;
+}
+body.dark-mode .main .nav {
+  color: #f0f0f0 !important;
+}
+body.dark-mode .sidebar .new-chat,
+body.dark-mode .sidebar .recent-entry,
+body.dark-mode .sidebar .bottom-item {
+  background: #23272f !important;
+  color: #f0f0f0 !important;
+}
